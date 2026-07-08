@@ -15,7 +15,7 @@ void setup() {
   cfg.mode = ESP32BLEComboMode::KEYBOARD_MOUSE;
   cfg.deviceName = "C3 Macropad";
   cfg.manufacturer = "Espressif";
-  cfg.batteryLevel 100;
+  cfg.batteryLevel = 100;
   cfg.appearance = ESP32BLEComboAppearance::AUTO;
 
   ble.begin(cfg);
@@ -29,7 +29,7 @@ void loop() {
     if(currentButtonState == LOW && lastButtonState == HIGH){
       Serial.println("Button pressed, executing macro");
 
-      //Maco will go here
+      //Macro will go here
 
       delay(150);
     }
